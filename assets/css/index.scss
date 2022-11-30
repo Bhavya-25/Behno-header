@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// common classes
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bheno-font {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+.bheno-background {
+    background: #E9E7E3;
+    height: 100vh;
+    max-width: 513px;
+    width: 100%;
+    display: inline-block;
+    padding: 37px 50px 30px;
+}
+// common classes end
+// header section  start
+.behno {
+    padding: 14px 69px 10px 61px;
+    cursor: pointer;
+    .toggle {
+        img {
+            display: none;
+        }
+    }
+    .d-flex {
+        justify-content: center;
+        .behnotext {
+            display: flex;
+            gap: 45px;
+            position: relative;
+            .headertext{
+                @extend.bheno-font;
+            }
+            .dropdown1 :hover + .hover_section{
+                display: block;
+                position: absolute;
+            }
+        }
+    }
+    img {
+        margin: 0 auto
+    }
+    .headericon {
+        img:first-child {
+            margin: 0 28px 0 53px;
+        }
+        img {
+            margin-top: -10px;
+        }
+    }
+}
+// header section ends
+// responsive  section start
+.toggle_list_items {
+    display: none;
+}
+// responsive section ends
+// hover section 1 start
+.hover_section {
+    @extend.bheno-background;
+    display: none;
+    .shop_all_categories {
+        margin-bottom: 58px;
+        .hover_unoder_list {
+            .hover_list_items {
+                @extend.bheno-font;
+            }
+            .hover_list_items:first-child {
+                color: #767676;
+            }
+        }
+    }
+    .our_signature {
+        margin-bottom: 58px;
+        .hover_unoder_list {
+            .hover_list_items {
+                @extend .bheno-font;
+            }
+            .hover_list_items:first-child {
+                font-weight: 700;
+                margin-bottom: 17px;
+            }
+        }
+    }
+    .special_project {
+        margin-bottom: 59px;
+        .hover_unoder_list {
+            .hover_list_items {
+                @extend .bheno-font;
+            }
+            .hover_list_items:first-child {
+                font-weight: 700;
+                margin-bottom: 17px;
+            }
+        }
+    }
+    .hover_list_items {
+        @extend .bheno-font;
+    }
+}
+// hover section 1 end
+// hover sectionn 2 start
+.nanamota_hover_section {
+    @extend.bheno-background;
+    display: none;
+    .nanamota {
+        margin-bottom: 76px;
+        .hover_unoder_list {
+            .hover_list_items {
+                @extend .bheno-font;
+                margin-bottom: 10px;
+                color: black;
+            }
+        }
+    }
+    .nanamota_img_section {
+        background: #758F8F;
+        max-width: 413px;
+        width: 100%;
+        padding: 52px 29px 65px;
+    }
+    img {
+        margin-bottom: 24px;
+    }
+    .hover_unoder_list {
+        .hover_list_items {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            list-style: none;
+            color: #fff;
+        }
+        .hover_list_items:first-child {
+            margin-bottom: 15px;
+        }
+    }
+}
+// hover sectionn 2 end
+// hover sectionn 3 start
+.client_service {
+    @extend.bheno-background;
+    padding-top: 57px;
+    display: none;
+    .hover_unoder_list {
+        .hover_list_items {
+            @extend .bheno-font;
+            margin-bottom: 10px;
+            span {
+                font-weight: 700;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+        .client_list {
+            margin-bottom: 57px;
+        }
+    }
+}
+// hover sectionn 3 end
+// hover sectionn 4 start
+.explore_our_world {
+    @extend.bheno-background;
+    display: none;
+    padding-top: 57px;
+    .hover_unoder_list {
+        .hover_list_items {
+            @extend .bheno-font;
+        }
+    }
+    img {
+        max-width: 456px;
+        width: 100%;
+        max-height: 456px;
+        height: 100%;
+    }
+}
+// hover sectionn 4 end
+// hover setion end
+// toggle design
+@media only screen and (max-width: 1050px) {
+    // common media query start
+    %bheno-font {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        list-style: none;
+        font-family: 'Poppins', sans-serif;
+    }
+    // common media query end
+    .behno {
+        position: relative;
+        .toggle {
+            img {
+                display: block;
+            }
+        }
+        .d-flex {
+            .headericon {
+                img:first-child {
+                    margin: 3px 28px 0 -47px;
+                }
+            }
+            .behnotext {
+                display: none;
+            }
+        }
+    }
+    .toggle_list_items {
+        display: block;
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        height: 100vh;
+        max-width: 304px;
+        width: 100%;
+        background: #E9E7E3;
+        padding: 37px 24px 80px 30px;
+        overflow-y: auto;
+        cursor: pointer;
+        flex-direction: column;
+        transition: all 0.8s cubic-bezier(0.71, 0, 0.33, 1.56) 0.1s;
+        .list_items {
+            @extend%bheno-font;
+            margin-bottom: 10px;
+        }
+        .responsive_list {
+            margin-bottom: 42px;
+        }
+    }
+    .toggle_list_items.active {
+        left: 0;
+        width: 100%;
+    }
+    .hover_section {
+        display: none;
+    }
+    .nanamota_hover_section {
+        display: none;
+    }
+    .client_service {
+        display: none;
+    }
+    .explore_our_world {
+        display: none;
+    }
+}

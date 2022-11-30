@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bheno-font, .explore_our_world .hover_unoder_list .hover_list_items, .client_service .hover_unoder_list .hover_list_items, .nanamota_hover_section .nanamota .hover_unoder_list .hover_list_items, .hover_section .hover_list_items, .hover_section .special_project .hover_unoder_list .hover_list_items, .hover_section .our_signature .hover_unoder_list .hover_list_items, .hover_section .shop_all_categories .hover_unoder_list .hover_list_items, .behno .d-flex .behnotext .headertext {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+.bheno-background, .explore_our_world, .client_service, .nanamota_hover_section, .hover_section {
+  background: #E9E7E3;
+  height: 100vh;
+  max-width: 513px;
+  width: 100%;
+  display: inline-block;
+  padding: 37px 50px 30px;
+}
+
+.behno {
+  padding: 14px 69px 10px 61px;
+  cursor: pointer;
+}
+.behno .toggle img {
+  display: none;
+}
+.behno .d-flex {
+  justify-content: center;
+}
+.behno .d-flex .behnotext {
+  display: flex;
+  gap: 45px;
+  position: relative;
+}
+.behno .d-flex .behnotext .dropdown1 :hover + .hover_section {
+  display: block;
+  position: absolute;
+}
+.behno img {
+  margin: 0 auto;
+}
+.behno .headericon img:first-child {
+  margin: 0 28px 0 53px;
+}
+.behno .headericon img {
+  margin-top: -10px;
+}
+
+.toggle_list_items {
+  display: none;
+}
+
+.hover_section {
+  display: none;
+}
+.hover_section .shop_all_categories {
+  margin-bottom: 58px;
+}
+.hover_section .shop_all_categories .hover_unoder_list .hover_list_items:first-child {
+  color: #767676;
+}
+.hover_section .our_signature {
+  margin-bottom: 58px;
+}
+.hover_section .our_signature .hover_unoder_list .hover_list_items:first-child {
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+.hover_section .special_project {
+  margin-bottom: 59px;
+}
+.hover_section .special_project .hover_unoder_list .hover_list_items:first-child {
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+.nanamota_hover_section {
+  display: none;
+}
+.nanamota_hover_section .nanamota {
+  margin-bottom: 76px;
+}
+.nanamota_hover_section .nanamota .hover_unoder_list .hover_list_items {
+  margin-bottom: 10px;
+  color: black;
+}
+.nanamota_hover_section .nanamota_img_section {
+  background: #758F8F;
+  max-width: 413px;
+  width: 100%;
+  padding: 52px 29px 65px;
+}
+.nanamota_hover_section img {
+  margin-bottom: 24px;
+}
+.nanamota_hover_section .hover_unoder_list .hover_list_items {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  list-style: none;
+  color: #fff;
+}
+.nanamota_hover_section .hover_unoder_list .hover_list_items:first-child {
+  margin-bottom: 15px;
+}
+
+.client_service {
+  padding-top: 57px;
+  display: none;
+}
+.client_service .hover_unoder_list .hover_list_items {
+  margin-bottom: 10px;
+}
+.client_service .hover_unoder_list .hover_list_items span {
+  font-weight: 700;
+}
+.client_service .hover_unoder_list .hover_list_items a {
+  color: black;
+  text-decoration: none;
+}
+.client_service .hover_unoder_list .client_list {
+  margin-bottom: 57px;
+}
+
+.explore_our_world {
+  display: none;
+  padding-top: 57px;
+}
+.explore_our_world img {
+  max-width: 456px;
+  width: 100%;
+  max-height: 456px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1050px) {
+  .toggle_list_items .list_items {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+  }
+  .behno {
+    position: relative;
+  }
+  .behno .toggle img {
+    display: block;
+  }
+  .behno .d-flex .headericon img:first-child {
+    margin: 3px 28px 0 -47px;
+  }
+  .behno .d-flex .behnotext {
+    display: none;
+  }
+  .toggle_list_items {
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: -100%;
+    height: 100vh;
+    max-width: 304px;
+    width: 100%;
+    background: #E9E7E3;
+    padding: 37px 24px 80px 30px;
+    overflow-y: auto;
+    cursor: pointer;
+    flex-direction: column;
+    transition: all 0.8s cubic-bezier(0.71, 0, 0.33, 1.56) 0.1s;
+  }
+  .toggle_list_items .list_items {
+    margin-bottom: 10px;
+  }
+  .toggle_list_items .responsive_list {
+    margin-bottom: 42px;
+  }
+  .toggle_list_items.active {
+    left: 0;
+    width: 100%;
+  }
+  .hover_section {
+    display: none;
+  }
+  .nanamota_hover_section {
+    display: none;
+  }
+  .client_service {
+    display: none;
+  }
+  .explore_our_world {
+    display: none;
+  }
+}/*# sourceMappingURL=index.css.map */
