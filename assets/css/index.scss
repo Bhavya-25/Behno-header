@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 // common classes
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+li{
+    list-style: none;
+}
 .d-flex {
     display: flex;
     justify-content: space-between;
@@ -45,10 +58,7 @@
             .headertext{
                 @extend.bheno-font;
             }
-            .dropdown1 :hover + .hover_section{
-                display: block;
-                position: absolute;
-            }
+          
         }
     }
     img {
@@ -72,7 +82,14 @@
 // hover section 1 start
 .hover_section {
     @extend.bheno-background;
-    display: none;
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top:80px;
+    left: 0;
+    transition: all 0.4s;
+    
     .shop_all_categories {
         margin-bottom: 58px;
         .hover_unoder_list {
@@ -111,6 +128,16 @@
     .hover_list_items {
         @extend .bheno-font;
     }
+}
+
+.right-hover{
+    right: 0px;
+    left: auto;
+}
+.headertext:hover .hover_section{
+    display: block;
+   opacity: 1;
+   visibility: visible;
 }
 // hover section 1 end
 // hover sectionn 2 start
@@ -151,6 +178,8 @@
         }
     }
 }
+
+
 // hover sectionn 2 end
 // hover sectionn 3 start
 .client_service {
@@ -195,6 +224,8 @@
 // hover sectionn 4 end
 // hover setion end
 // toggle design
+
+
 @media only screen and (max-width: 1050px) {
     // common media query start
     %bheno-font {
@@ -239,7 +270,7 @@
         flex-direction: column;
         transition: all 0.8s cubic-bezier(0.71, 0, 0.33, 1.56) 0.1s;
         .list_items {
-            @extend%bheno-font;
+            @extend %bheno-font;
             margin-bottom: 10px;
         }
         .responsive_list {
@@ -250,16 +281,16 @@
         left: 0;
         width: 100%;
     }
-    .hover_section {
-        display: none;
-    }
-    .nanamota_hover_section {
-        display: none;
-    }
-    .client_service {
-        display: none;
-    }
-    .explore_our_world {
-        display: none;
-    }
+    // .hover_section {
+    //     display: none;
+    // }
+    // .nanamota_hover_section {
+    //     display: none;
+    // }
+    // .client_service {
+    //     display: none;
+    // }
+    // .explore_our_world {
+    //     display: none;
+    // }
 }

@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
 .d-flex {
   display: flex;
   justify-content: space-between;
@@ -44,10 +58,6 @@
   gap: 45px;
   position: relative;
 }
-.behno .d-flex .behnotext .dropdown1 :hover + .hover_section {
-  display: block;
-  position: absolute;
-}
 .behno img {
   margin: 0 auto;
 }
@@ -63,7 +73,12 @@
 }
 
 .hover_section {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  transition: all 0.4s;
 }
 .hover_section .shop_all_categories {
   margin-bottom: 58px;
@@ -85,6 +100,17 @@
   font-weight: 700;
   margin-bottom: 17px;
 }
+.right-hover {
+  right: 0px;
+  left: auto;
+}
+
+.headertext:hover .hover_section {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
 .nanamota_hover_section {
   display: none;
 }
@@ -191,17 +217,5 @@
   .toggle_list_items.active {
     left: 0;
     width: 100%;
-  }
-  .hover_section {
-    display: none;
-  }
-  .nanamota_hover_section {
-    display: none;
-  }
-  .client_service {
-    display: none;
-  }
-  .explore_our_world {
-    display: none;
   }
 }/*# sourceMappingURL=index.css.map */
