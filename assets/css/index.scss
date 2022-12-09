@@ -3,7 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background: cadetblue;
+}
 // common classes
+a {
+    text-decoration: none;
+    color: black;
+}
+button {
+    background-color: transparent;
+    border: none;
+}
+li {
+    list-style: none;
+}
 .d-flex {
     display: flex;
     justify-content: space-between;
@@ -31,36 +45,67 @@
 .behno {
     padding: 14px 69px 10px 61px;
     cursor: pointer;
+    background-color: #fff;
     .toggle {
         img {
             display: none;
         }
     }
     .d-flex {
-        justify-content: center;
         .behnotext {
             display: flex;
             gap: 45px;
             position: relative;
-            .headertext{
+            .headertext {
                 @extend.bheno-font;
+                margin: -30px;
+                padding: 30px;
+                .nanamota_img_section {
+                    background: #758F8F;
+                    max-width: 413px;
+                    width: 100%;
+                    padding: 52px 29px 65px;
+                    margin-top: 76px;
+                    .hover_unoder_list {
+                        .hover_list_items {
+                            font-family: 'Work Sans';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 13px;
+                            line-height: 15px;
+                            list-style: none;
+                            color: #fff;
+                        }
+                        .hover_list_items:first-child {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    img {
+                        margin-bottom: 24px;
+                    }
+                }
             }
-            .dropdown1 :hover + .hover_section{
-                display: block;
-                position: absolute;
+            .client_list {
+                margin-bottom: 57px;
+                span {
+                    font-weight: 700;
+                }
+            }
+            .right-hover {
+                padding-top: 54px;
             }
         }
+    }
+}
+img {
+    margin: 0 auto
+}
+.headericon {
+    img:first-child {
+        margin: 0 28px 0 53px;
     }
     img {
-        margin: 0 auto
-    }
-    .headericon {
-        img:first-child {
-            margin: 0 28px 0 53px;
-        }
-        img {
-            margin-top: -10px;
-        }
+        margin-top: -10px;
     }
 }
 // header section ends
@@ -72,7 +117,13 @@
 // hover section 1 start
 .hover_section {
     @extend.bheno-background;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    transition: all 0.4s;
+    overflow-y: auto;
     .shop_all_categories {
         margin-bottom: 58px;
         .hover_unoder_list {
@@ -112,6 +163,15 @@
         @extend .bheno-font;
     }
 }
+.right-hover {
+    right: 0px;
+    left: auto;
+}
+.headertext:hover .hover_section {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
 // hover section 1 end
 // hover sectionn 2 start
 .nanamota_hover_section {
@@ -127,29 +187,6 @@
             }
         }
     }
-    .nanamota_img_section {
-        background: #758F8F;
-        max-width: 413px;
-        width: 100%;
-        padding: 52px 29px 65px;
-    }
-    img {
-        margin-bottom: 24px;
-    }
-    .hover_unoder_list {
-        .hover_list_items {
-            font-family: 'Work Sans';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 15px;
-            list-style: none;
-            color: #fff;
-        }
-        .hover_list_items:first-child {
-            margin-bottom: 15px;
-        }
-    }
 }
 // hover sectionn 2 end
 // hover sectionn 3 start
@@ -161,16 +198,10 @@
         .hover_list_items {
             @extend .bheno-font;
             margin-bottom: 10px;
-            span {
-                font-weight: 700;
-            }
             a {
                 color: black;
                 text-decoration: none;
             }
-        }
-        .client_list {
-            margin-bottom: 57px;
         }
     }
 }
@@ -238,28 +269,92 @@
         cursor: pointer;
         flex-direction: column;
         transition: all 0.8s cubic-bezier(0.71, 0, 0.33, 1.56) 0.1s;
+        .dropdown{
+            .d-flex{
+                    gap:70px;
+                        // display: inline-flex;
+            }
+        }
         .list_items {
-            @extend%bheno-font;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn_click {
+            @extend %bheno-font;
             margin-bottom: 10px;
+        }
+        .dropdown_list {
+            @extend %bheno-font;
+            .dropdown_items {
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 9px;
+            
+                .click_items:first-child {
+                    margin-top: 19px;
+                }
+                .click_items:last-child {
+                    margin-bottom: 41px;
+                }
+                .click_item {
+                    margin-bottom: 41px;
+                }
+            }
+        }
+      
+        button {
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+            @extend %bheno-font;
+            .click_list {
+                .click_items {
+                    @extend %bheno-font;
+                    margin-bottom: 10px;
+                }
+            }
         }
         .responsive_list {
             margin-bottom: 42px;
+        }
+        .dropdown1 {
+            margin-top: 42px;
+            .d-flex{
+                gap: 100px;
+                display: inline-flex;
+            }
         }
     }
     .toggle_list_items.active {
         left: 0;
         width: 100%;
     }
-    .hover_section {
+    .minus {
         display: none;
     }
-    .nanamota_hover_section {
+    .btn_click.show .minus {
+        display: block;
+    }
+    .btn_click.show .plus {
         display: none;
     }
-    .client_service {
+    .dropdown_list {
         display: none;
     }
-    .explore_our_world {
+    .btn_click.show+.dropdown_list {
+        display: block;
+    }
+    .dropdown_items.show+.click_items {
+        display: block;
+    }
+
+    .click_list{
         display: none;
+    }
+
+    .dropdown_items.show .click_list{
+        display: block;
     }
 }

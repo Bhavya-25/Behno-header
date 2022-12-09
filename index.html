@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Behno Header</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Work+Sans:wght@500&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <!-- header section start -->
@@ -15,122 +18,210 @@
             <div class="toggle">
                 <img src="assets/icon/toggle.svg" alt="toggleimg">
             </div>
-            <ul class="behnotext">
-                <li class="headertext dropdown1">HANDBAGS & WALLETS</li>
-                <li class="headertext">NANAMOTA BASICS</li>
-                <li class="headertext">SALE</li>
-                </ul>
-                <img src="assets/icon/behno logo.png" alt="behnologo">
-                <ul class="behnotext">
-                    <li class="headertext">CLIENT SERVICES</li>
-                    <li class="headertext">THE SENSE OF BEHNO</li>
-                </ul>
-                <div class="headericon">
-                    <img src="assets/icon/search.png" alt="searchicon">
-                    <img src="assets/icon/shoingbag.png" alt="shopingbagicon">
+            <ul class="toggle_list_items">
+                <div class="dropdown">
+                    <button class="btn_click d-flex" onclick="togleDropdown(event)">HANDBAGS & WALLETS
+                        <div>
+                            <p class="minus">-</p>
+                            <p class="plus">+</p>   
+                        </div> </button>
+                    <ul class="dropdown_list">
+                        <li class="dropdown_items">SHOP ALL</li>
+                       <button class="dropdown_items" onclick="togleDropdown(event)">SHOP BY CATEGORY
+                        <div>
+                            <p class="minus">-</p>
+                            <p class="plus">+</p>   
+                        </div> 
+                            <ul class="click_list">
+                                <li class="click_items">CROSSBODY BAGS</li>
+                                <li class="click_items">SHOULDER BAGS</li>
+                                <li class="click_items">TOP HANDLES</li>
+                                <li class="click_items">TOTES</li>
+                                <li class="click_items">BELT BAGS</li>
+                                <li class="click_items">CLUTCHES & POUCHES</li>
+                                <li class="click_items">WALLETS</li>
+                            </ul>
+                       </button>
+                        </li>
+                        <div>
+                            <button class="dropdown_items" onclick="togleDropdown(event)">OUR SIGNATURES
+                                <ul class="click_list">
+                                    <li class="click_items">INA BUCKET BAGS</li>
+                                    <li class="click_items">ELIZABETH BAGETTE BAGS</li>
+                                    <li class="click_items">MARY BOX BAGS</li>
+                                    <li class="click_items">TILDA SADDLE BAGS</li>
+                                </ul>
+                            </button>
+                        </div>
+                        </li>
+                        </li>
+                        <button class="dropdown_items" onclick="togleDropdown(event)">SPECIAL PROJECTS
+                            <ul class="click_list">
+                                <li class="click_items">NATIONAL DOWN SYNDROME SOCIETY x BEHNO</li>
+                                <li class="click_items">ARTISANAL EDIT</li>
+                            </ul>
+                        </button>
+                        </li>
+                        </li>
+                        <li class="dropdown_items click_item">SALE
+                        <li>
+                    </ul>
+                    <!-- </li> -->
+                    <button class="btn_click  d-flex" onclick="togleDropdown(event)">NANAMOTA BASICS 
+                        <div>
+                            <p class="minus">-</p>
+                            <p class="plus">+</p>   
+                        </div>
+                    </button>
+                    <ul class="dropdown_list">
+                        <li class="dropdown_items">EXPLORE NANAMOTA</li>
+                        <li class="dropdown_items">WOMENS TEES</li>
+                        <li class="dropdown_items">MENS TEES</li>
+                        <li class="dropdown_items">FACEMASKS</li>
+                    </ul>
+                    <div>
                 </div>
+                <!-- <li class="list_items"> -->
+                    <button class="btn_click">NEW IN </button>
+                </div>
+                <div class="dropdown1">
+                    <div>
+                        <button class="btn_click  d-flex" onclick="togleDropdown(event)">CLIENT SERVICES <div>
+                            <p class="minus">-</p>
+                            <p class="plus">+</p>   
+                        </div></button>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_items">WRITE TO US</li>
+                            <li class="dropdown_items">TEXT US</li>
+                            <li class="dropdown_items">SHIPPING & DELIVERY</li>
+                            <li class="dropdown_items">RETURNS & EXCHANGES</li>
+                            <li class="dropdown_items">GENERAL POLICY</li>
+                        </ul>
+                    </div>
+                <button class="btn_click  d-flex" onclick="togleDropdown(event)">THE SENSE OF BEHNO 
+                    <div>
+                        <p class="minus">-</p>
+                        <p class="plus">+</p>   
+                    </div>
+                </button>
+                <ul class="dropdown_list">
+                    <li class="dropdown_items">EXPLORE OUR WORLD</li>
+                    <li class="dropdown_items">OUR ETHICAL PHILISOPHY</li>
+                    <li class="dropdown_items">BEHNO IN THE WORLD & PRESS</li>
+                    <li class="dropdown_items">THE BEHNO STANDARD & MSA ETHOS</li>
+                    <li class="dropdown_items">OUR PARTNER HANDBAG FACTORY</li>
+                </ul>
             </div>
-            <!-- header section end -->
-        <!-- toggle section start -->
-        <ul class="toggle_list_items">
-            <li class="list_items">HANDBAGS & WALLETS</li>
-            <li class="list_items">NANAMOTA BASICS</li>
-            <li class="list_items responsive_list">NEW IN</li>
-            <li class="list_items">CLIENT SERVICES</li>
-            <li class="list_items">THE SENSE OF BEHNO</li>
-        </ul>
-        <!-- toggle section end -->
+            </ul>
+            <ul class="behnotext">
+                <li class="headertext dropdown1">HANDBAGS & WALLETS
+                    <!-- hover section 1 start -->
+                    <section class="hover_section">
+                        <div class="shop_all_categories d-flex">
+                            <ul class="hover_unoder_list">
+                                <li class="hover_list_items">SHOP ALL CATEGORIES</li>
+                                <li class="hover_list_items">CROSSBODY BAGS</li>
+                                <li class="hover_list_items">SHOULDER BAGS</li>
+                                <li class="hover_list_items">MINI BAGS</li>
+                                <li class="hover_list_items">TOP HANDLES</li>
+                                <li class="hover_list_items">TOTES</li>
+                                <li class="hover_list_items">BELT BAGS</li>
+                                <li class="hover_list_items">CLUTCHES & POUCHES</li>
+                                <li class="hover_list_items">WALLETS</li>
+                            </ul>
+                            <img src="assets/images/hoverimg1.png" alt="image">
+                        </div>
+                        <!-- hover section1 end -->
+                        <!-- hover section2 start -->
+                        <div class="our_signature d-flex">
+                            <ul class="hover_unoder_list">
+                                <li class="hover_list_items">OUR SIGNATURES</li>
+                                <li class="hover_list_items">INA BUCKET BAGS</li>
+                                <li class="hover_list_items">ELIZABETH BAGUETTE BAGS</li>
+                                <li class="hover_list_items">MARY BOX BAGS</li>
+                                <li class="hover_list_items">TILDA SADDLE BAGS</li>
+                            </ul>
+                            <img src="assets/images/hoverimg2.png" alt="image">
+                        </div>
+                        <div class="special_project d-flex">
+                            <ul class="hover_unoder_list">
+                                <li class="hover_list_items">SPECIAL PROJECTS</li>
+                                <li class="hover_list_items">NATIONAL DOWN SYNDROME SOCIETY x BEHNO</li>
+                                <li class="hover_list_items">ARTISANAL EDIT</li>
+                            </ul>
+                        </div>
+                        <p class="hover_list_items">SALE</p>
+                        <!-- hover section2  end -->
+                    </section>
+                </li>
+                <!-- hover section 3  start -->
+                <li class="headertext">NANAMOTA BASICS
+                    <section class="hover_section">
+                        <div class="nanamota d-flex">
+                            <ul class="hover_unoder_list">
+                                <li class="hover_list_items">EXPLORE NANAMOTA</li>
+                                <li class="hover_list_items">WOMENS TEES</li>
+                                <li class="hover_list_items">MENS TEES</li>
+                                <li class="hover_list_items">FACEMASKS</li>
+                            </ul>
+                            <img src="assets/images/hover2img1.png" alt="image">
+                        </div>
+                        <div class="nanamota_img_section">
+                            <img src="assets/images/nanamotaimg.png" alt="nanamotaimg">
+                            <ul class="hover_unoder_list">
+                                <li class="hover_list_items">The World’s Softest Basics.</li>
+                                <li class="hover_list_items">Sourced sustainably. </li>
+                                <li class="hover_list_items">Constructed ethically</li>
+                                <li class="hover_list_items">Worn responsibly.
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </li>
+                <li class="headertext">SALE</li>
+            </ul>
+            <img src="assets/icon/behno logo.png" alt="behnologo">
+            <ul class="behnotext">
+                <li class="headertext">CLIENT SERVICES
+                    <section class="hover_section right-hover">
+                        <ul class="hover_unoder_list">
+                            <li class="hover_list_items mailto">WRITE TO US AT<a
+                                    href="mailto:CLIENTSERVICES@BEHNO.COM">CLIENTSERVICES@BEHNO.COM</a></li>
+                            <li class="hover_list_items client_list">TEXT US <span>HELLO</span> AT<a
+                                    href="tel:+1833 217-2636">+47 333 78 901</a></li>
+                            <li class="hover_list_items">SHIPPING & DELIVERY</li>
+                            <li class="hover_list_items">RETURNS & EXCHANGES</li>
+                            <li class="hover_list_items">GENERAL POLICY</li>
+                        </ul>
+                    </section>
+                </li>
+                <li class="headertext">THE SENSE OF BEHNO
+                    <section class="hover_section right-hover ">
+                        <ul class="hover_unoder_list">
+                            <li class="hover_list_items">EXPLORE OUR WORLD</a></li>
+                            <li class="hover_list_items">OUR ETHICAL PHILISOPHY</li>
+                            <li class="hover_list_items">BEHNO IN THE WORLD & PRESS</li>
+                            <li class="hover_list_items">THE BEHNO STANDARD & MSA ETHOS</li>
+                            <li class="hover_list_items">OUR PARTNER HANDBAG FACTORY</li>
+                        </ul>
+                        <img src="assets/images/hover4img.png" alt="hoverimg">
+                    </section>
+                </li>
+            </ul>
+            <div class="headericon">
+                <img src="assets/icon/search.png" alt="searchicon">
+                <img src="assets/icon/shoingbag.png" alt="shopingbagicon">
+            </div>
+        </div>
     </header>
-    <!-- hover section 1 start -->
-    <section class="hover_section" >
-        <div class="shop_all_categories d-flex">
-            <ul class="hover_unoder_list">
-                <li class="hover_list_items">SHOP ALL CATEGORIES</li>
-                <li class="hover_list_items">CROSSBODY BAGS</li>
-                <li class="hover_list_items">SHOULDER BAGS</li>
-                <li class="hover_list_items">MINI BAGS</li>
-                <li class="hover_list_items">TOP HANDLES</li>
-                <li class="hover_list_items">TOTES</li>
-                <li class="hover_list_items">BELT BAGS</li>
-                <li class="hover_list_items">CLUTCHES & POUCHES</li>
-                <li class="hover_list_items">WALLETS</li>
-            </ul>
-    <img src="assets/images/hoverimg1.png" alt="image">
-        </div>
-        <div class="our_signature d-flex">
-            <ul class="hover_unoder_list">
-                <li class="hover_list_items">OUR SIGNATURES</li>
-                <li class="hover_list_items">INA BUCKET BAGS</li>
-                <li class="hover_list_items">ELIZABETH BAGUETTE BAGS</li>
-                <li class="hover_list_items">MARY BOX BAGS</li>
-                <li class="hover_list_items">TILDA SADDLE BAGS</li>
-            </ul>
-            <img src="assets/images/hoverimg2.png" alt="image">
-        </div>
-        <div class="special_project d-flex">
-            <ul class="hover_unoder_list">
-                <li class="hover_list_items">SPECIAL PROJECTS</li>
-                <li class="hover_list_items">NATIONAL DOWN SYNDROME SOCIETY x BEHNO</li>
-                <li class="hover_list_items">ARTISANAL EDIT</li>
-            </ul>
-        </div>
-                <p class="hover_list_items">SALE</p>
-    </section>
-    <!-- hover section1 end -->
-    <!-- hover section2 start -->
-    <section class="nanamota_hover_section">
-        <div class="nanamota d-flex">
-            <ul class="hover_unoder_list">
-                <li class="hover_list_items">EXPLORE NANAMOTA</li>
-                <li class="hover_list_items">WOMENS TEES</li>
-                <li class="hover_list_items">MENS TEES</li>
-                <li class="hover_list_items">FACEMASKS</li>
-            </ul>
-            <img src="assets/images/hover2img1.png" alt="image">
-        </div>
-    <div class="nanamota_img_section">
-        <img src="assets/images/nanamotaimg.png" alt="nanamotaimg">
-        <ul class="hover_unoder_list">
-            <li class="hover_list_items">The World’s Softest Basics.</li>
-            <li class="hover_list_items">Sourced sustainably. </li>
-            <li class="hover_list_items">Constructed ethically</li>
-            <li class="hover_list_items">Worn responsibly.
-            </li>
-        </ul>
-    </div>
-    </section>
-    <!-- hover section2  end -->
-    <!-- hover section 3  start -->
-<section class="client_service">
-    <ul class="hover_unoder_list">
-        <li class="hover_list_items">WRITE TO US AT<a href="mailto:CLIENTSERVICES@BEHNO.COM">CLIENTSERVICES@BEHNO.COM</a></li>
-        <li class="hover_list_items client_list">TEXT US <span>HELLO</span> AT<a href="tel:+1833 217-2636">+47 333 78 901</a></li>
-        <li class="hover_list_items">SHIPPING & DELIVERY</li>
-        <li class="hover_list_items">RETURNS & EXCHANGES</li>
-        <li class="hover_list_items">GENERAL POLICY</li>
-    </ul>
-</section>
-    <!-- hover section 3  end -->
-        <!-- hover section 4  start -->
-<section class="explore_our_world">
-    <ul class="hover_unoder_list">
-        <li class="hover_list_items">EXPLORE OUR WORLD</a></li>
-        <li class="hover_list_items">OUR ETHICAL PHILISOPHY</li>
-        <li class="hover_list_items">BEHNO IN THE WORLD & PRESS</li>
-        <li class="hover_list_items">THE BEHNO STANDARD & MSA ETHOS</li>
-        <li class="hover_list_items">OUR PARTNER HANDBAG FACTORY</li>
-    </ul>
-    <img src="assets/images/hover4img.png" alt="hoverimg">
-</section>
-    <!-- hover section 4  end -->
     <script>
         let HeaderToggle = document.querySelector(".toggle");
         let HeaderNavbar = document.querySelector(".toggle_list_items");
         HeaderToggle.addEventListener("click", () => {
             HeaderNavbar.classList.toggle("active");
         });
-        let toggledropdown = (event) => {
-            event.target.parentElement.classList.toggle("active");
+        const togleDropdown = (event) => {
+            event.target.classList.toggle("show");
         };
     </script>
 </body>

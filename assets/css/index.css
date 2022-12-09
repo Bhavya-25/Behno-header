@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+body {
+  background: cadetblue;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
 .d-flex {
   display: flex;
   justify-content: space-between;
@@ -32,29 +50,60 @@
 .behno {
   padding: 14px 69px 10px 61px;
   cursor: pointer;
+  background-color: #fff;
 }
 .behno .toggle img {
   display: none;
-}
-.behno .d-flex {
-  justify-content: center;
 }
 .behno .d-flex .behnotext {
   display: flex;
   gap: 45px;
   position: relative;
 }
-.behno .d-flex .behnotext .dropdown1 :hover + .hover_section {
-  display: block;
-  position: absolute;
+.behno .d-flex .behnotext .headertext {
+  margin: -30px;
+  padding: 30px;
 }
-.behno img {
+.behno .d-flex .behnotext .headertext .nanamota_img_section {
+  background: #758F8F;
+  max-width: 413px;
+  width: 100%;
+  padding: 52px 29px 65px;
+  margin-top: 76px;
+}
+.behno .d-flex .behnotext .headertext .nanamota_img_section .hover_unoder_list .hover_list_items {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  list-style: none;
+  color: #fff;
+}
+.behno .d-flex .behnotext .headertext .nanamota_img_section .hover_unoder_list .hover_list_items:first-child {
+  margin-bottom: 15px;
+}
+.behno .d-flex .behnotext .headertext .nanamota_img_section img {
+  margin-bottom: 24px;
+}
+.behno .d-flex .behnotext .client_list {
+  margin-bottom: 57px;
+}
+.behno .d-flex .behnotext .client_list span {
+  font-weight: 700;
+}
+.behno .d-flex .behnotext .right-hover {
+  padding-top: 54px;
+}
+
+img {
   margin: 0 auto;
 }
-.behno .headericon img:first-child {
+
+.headericon img:first-child {
   margin: 0 28px 0 53px;
 }
-.behno .headericon img {
+.headericon img {
   margin-top: -10px;
 }
 
@@ -63,7 +112,13 @@
 }
 
 .hover_section {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  transition: all 0.4s;
+  overflow-y: auto;
 }
 .hover_section .shop_all_categories {
   margin-bottom: 58px;
@@ -85,6 +140,17 @@
   font-weight: 700;
   margin-bottom: 17px;
 }
+.right-hover {
+  right: 0px;
+  left: auto;
+}
+
+.headertext:hover .hover_section {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
 .nanamota_hover_section {
   display: none;
 }
@@ -95,27 +161,6 @@
   margin-bottom: 10px;
   color: black;
 }
-.nanamota_hover_section .nanamota_img_section {
-  background: #758F8F;
-  max-width: 413px;
-  width: 100%;
-  padding: 52px 29px 65px;
-}
-.nanamota_hover_section img {
-  margin-bottom: 24px;
-}
-.nanamota_hover_section .hover_unoder_list .hover_list_items {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 15px;
-  list-style: none;
-  color: #fff;
-}
-.nanamota_hover_section .hover_unoder_list .hover_list_items:first-child {
-  margin-bottom: 15px;
-}
 
 .client_service {
   padding-top: 57px;
@@ -124,15 +169,9 @@
 .client_service .hover_unoder_list .hover_list_items {
   margin-bottom: 10px;
 }
-.client_service .hover_unoder_list .hover_list_items span {
-  font-weight: 700;
-}
 .client_service .hover_unoder_list .hover_list_items a {
   color: black;
   text-decoration: none;
-}
-.client_service .hover_unoder_list .client_list {
-  margin-bottom: 57px;
 }
 
 .explore_our_world {
@@ -147,7 +186,7 @@
 }
 
 @media only screen and (max-width: 1050px) {
-  .toggle_list_items .list_items {
+  .toggle_list_items button .click_list .click_items, .toggle_list_items button, .toggle_list_items .dropdown_list, .toggle_list_items .btn_click {
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
@@ -182,26 +221,76 @@
     flex-direction: column;
     transition: all 0.8s cubic-bezier(0.71, 0, 0.33, 1.56) 0.1s;
   }
+  .toggle_list_items .dropdown .d-flex {
+    gap: 70px;
+  }
   .toggle_list_items .list_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toggle_list_items .btn_click {
+    margin-bottom: 10px;
+  }
+  .toggle_list_items .dropdown_list .dropdown_items {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+  .toggle_list_items .dropdown_list .dropdown_items .click_items:first-child {
+    margin-top: 19px;
+  }
+  .toggle_list_items .dropdown_list .dropdown_items .click_items:last-child {
+    margin-bottom: 41px;
+  }
+  .toggle_list_items .dropdown_list .dropdown_items .click_item {
+    margin-bottom: 41px;
+  }
+  .toggle_list_items button {
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+  .toggle_list_items button .click_list .click_items {
     margin-bottom: 10px;
   }
   .toggle_list_items .responsive_list {
     margin-bottom: 42px;
   }
+  .toggle_list_items .dropdown1 {
+    margin-top: 42px;
+  }
+  .toggle_list_items .dropdown1 .d-flex {
+    gap: 100px;
+    display: inline-flex;
+  }
   .toggle_list_items.active {
     left: 0;
     width: 100%;
   }
-  .hover_section {
+  .minus {
     display: none;
   }
-  .nanamota_hover_section {
+  .btn_click.show .minus {
+    display: block;
+  }
+  .btn_click.show .plus {
     display: none;
   }
-  .client_service {
+  .dropdown_list {
     display: none;
   }
-  .explore_our_world {
+  .btn_click.show + .dropdown_list {
+    display: block;
+  }
+  .dropdown_items.show + .click_items {
+    display: block;
+  }
+  .click_list {
     display: none;
+  }
+  .dropdown_items.show .click_list {
+    display: block;
   }
 }/*# sourceMappingURL=index.css.map */
